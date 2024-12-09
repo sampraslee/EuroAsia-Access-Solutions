@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #9f3e2d;
+  --secondary-color: #b3a488;
+  --accent-color: #ebbeb6;
+  --bg-color: #fefefb;
+  --text-color: #0c0403;
+  --brand-font: "Inter", sans-serif;
+}
+
 *,
 *::before,
 *::after {
