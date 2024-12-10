@@ -26,7 +26,28 @@ h4,
 body,
 p,
 figure {
-  margin-block-end: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 ul[role="list"],
