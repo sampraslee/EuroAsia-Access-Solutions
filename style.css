@@ -1,13 +1,4 @@
 @layer reset {
-  :root {
-    --primary-color: #9f3e2d;
-    --secondary-color: #b3a488;
-    --accent-color: #ebbeb6;
-    --bg-color: #fefefb;
-    --text-color: #0c0403;
-    --brand-font: "Inter", sans-serif;
-  }
-  
   *,
   *::before,
   *::after {
@@ -78,4 +69,12 @@
     max-width: 100%;
     display: block;
   }  
+}
+
+:root {
+  --clr-primary-500: #9f3e2d;
+  --clr-secondary-500: #b3a488;
+  --clr-accent-500: #ebbeb6;
+  --clr-white-500: #fefefb;
+  --clr-black-500: #0c0403;
 }
