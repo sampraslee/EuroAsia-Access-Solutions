@@ -72,9 +72,44 @@
 }
 
 :root {
-  --clr-primary-500: #9f3e2d;
-  --clr-secondary-500: #b3a488;
-  --clr-accent-500: #ebbeb6;
+/* primitive */
+  --clr-chesnut-500: #9f3e2d;
+  --clr-khaki-500: #b3a488;
+  --clr-tea-rose-500: #ebbeb6;
   --clr-white-500: #fefefb;
   --clr-black-500: #0c0403;
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.5,1240,18,1.5,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --ff-heading: "Inter", serif;
+  --ff-body: "Inter", serif;
+  /* Step 0: 16px → 18px */
+  --fs-small: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+  /* Step 1: 24px → 27px */
+  --fs-medium: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
+  /* Step 2: 36px → 40.5px */
+  --fs-large: clamp(2.25rem, 2.1522rem + 0.4891vw, 2.5313rem);
+  /* Step 3: 54px → 60.75px */
+  --fs-extra-large: clamp(3.375rem, 3.2283rem + 0.7337vw, 3.7969rem);
+
+/* semantic */
+  --clr-primary: var(--clr-chesnut-500);
+  --clr-secondary: var(--clr-khaki-500);
+  --clr-accent: var(--clr-tea-rose-500);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--ff-heading);
+}
+h1 {
+  font-size: var(--fs-extra-large);
+}
+h2 {
+  font-size: var(--fs-large);
+}
+h3 {
+  font-size: var(--fs-medium);
+}
+p {
+  font-family: var(--ff-body);
+  font-size: var(--fs-small);
 }
