@@ -71,6 +71,35 @@
   }  
 }
 
+@layer components {
+  header {
+    background-color: #ffff;
+    border: 0.2px solid var(--clr-khaki-500);
+    border-radius: 4px;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .logo {
+      width: 100px;
+    }
+
+    & nav > ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      & a {
+        font-weight: var(--fw-extra-light);
+        text-decoration: none;
+        color: var(--clr-text-dark);
+      }
+    }
+  }
+}
 :root {
 /* primitive */
   --clr-chesnut-500: #9f3e2d;
@@ -82,6 +111,14 @@
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.5,1240,18,1.5,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --ff-heading: "Inter", serif;
   --ff-body: "Inter", serif;
+
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  
   /* Step 0: 16px → 18px */
   --fs-small: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
   /* Step 1: 24px → 27px */
@@ -95,10 +132,17 @@
   --clr-primary: var(--clr-chesnut-500);
   --clr-secondary: var(--clr-khaki-500);
   --clr-accent: var(--clr-tea-rose-500);
+  --clr-text-light: var(--clr-white-500);
+  --clr-text-dark: var(--clr-black-500);
 }
 
+html {
+  background-color: var(--clr-white-500);
+}
 h1, h2, h3, h4 {
   font-family: var(--ff-heading);
+  color: var(--clr-text-dark);
+  font-weight: 800;
 }
 h1 {
   font-size: var(--fs-extra-large);
@@ -106,10 +150,29 @@ h1 {
 h2 {
   font-size: var(--fs-large);
 }
-h3 {
+h3, h4 {
   font-size: var(--fs-medium);
+}
+a {
+  font-family: var(--ff-body);
+  font-size: var(--fs-small);
+  line-height: 1.1;
 }
 p {
   font-family: var(--ff-body);
   font-size: var(--fs-small);
+  line-height: 1.4;
+}
+img {
+  border-radius: 8px;
+}
+.word-highlight {
+  background: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
+  background-clip: text;
+  color: transparent;
+}
+
+.wrapper {
+  max-width: 80%;
+  margin-inline: auto;
 }
