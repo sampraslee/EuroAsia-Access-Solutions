@@ -100,6 +100,26 @@
     }
   }
 }
+
+@layer layout {
+  .wrapper {
+    max-width: 80%;
+    margin-inline: auto;
+  }
+  
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+  }
+
+  .about-copy > p {
+    width: 55ch;
+  }
+
+}
 :root {
 /* primitive */
   --clr-chesnut-500: #9f3e2d;
@@ -170,9 +190,4 @@ img {
   background: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
   background-clip: text;
   color: transparent;
-}
-
-.wrapper {
-  max-width: 80%;
-  margin-inline: auto;
 }
