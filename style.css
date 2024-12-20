@@ -103,11 +103,11 @@
 
 @layer layout {
   .wrapper {
-    max-width: 80%;
+    max-width: 85%;
     margin-inline: auto;
   }
   
-  .column {
+  .columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -115,10 +115,22 @@
     gap: 1rem;
   }
 
-  .about-copy > p {
-    width: 55ch;
+  div[class*="copy"] > p {
+    width: 50ch;
   }
 
+  .landmark-projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    
+    /* display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem; */
+  }
 }
 :root {
 /* primitive */
