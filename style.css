@@ -99,6 +99,12 @@
       }
     }
   }
+
+  .solution-category {
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-regular);
+    color: var(--clr-khaki-500);
+  }
 }
 
 @layer layout {
@@ -181,10 +187,10 @@
 html {
   background-color: var(--clr-white-500);
 }
-h1, h2, h3, h4 {
+h1, h2, h4 {
   font-family: var(--ff-heading);
   color: var(--clr-text-dark);
-  font-weight: 800;
+  font-weight: var(--fw-extra-bold);
 }
 h1 {
   font-size: var(--fs-extra-large);
@@ -198,6 +204,7 @@ h3, h4 {
 a {
   font-family: var(--ff-body);
   font-size: var(--fs-small);
+  color: var(--clr-chesnut-500);
   line-height: 1.1;
 }
 p {
