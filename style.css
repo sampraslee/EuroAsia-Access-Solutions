@@ -4,13 +4,13 @@
   *::after {
     box-sizing: border-box;
   }
-  
+
   html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
   }
-  
+
   h1,
   h2,
   h3,
@@ -20,7 +20,7 @@
   figure {
     margin: 0;
   }
-  
+
   h1,
   h2,
   h3,
@@ -29,29 +29,29 @@
   label {
     line-height: 1.1;
   }
-  
+
   h1,
   h2,
   h3,
   h4 {
     text-wrap: balance;
   }
-  
+
   p,
   li {
     text-wrap: pretty;
   }
-  
+
   ul[role="list"],
   ol[role="list"] {
     list-style: none;
   }
-  
+
   body {
     min-height: 100vh;
     line-height: 1.5;
   }
-  
+
   input,
   button,
   textarea,
@@ -59,16 +59,16 @@
     font-family: inherit;
     font-size: inherit;
   }
-  
+
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
-  
+
   img,
   picture {
     max-width: 100%;
     display: block;
-  }  
+  }
 }
 
 @layer components {
@@ -120,7 +120,8 @@
       gap: 0.25rem;
       flex-grow: 1;
     }
-    & :first-child, & :nth-last-child(2) {
+    & :first-child,
+    & :nth-last-child(2) {
       flex: 1 1 100%;
     }
     & input[type="submit"] {
@@ -133,6 +134,12 @@
       padding: 0.5rem 1rem;
     }
   }
+
+  address {
+    font-family: var(--ff-body);
+    font-size: var(--fs-medium);
+    font-style: unset;
+  }
 }
 
 @layer layout {
@@ -140,7 +147,7 @@
     max-width: 85%;
     margin-inline: auto;
   }
-  
+
   .columns {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +164,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    
+
     & > * {
       width: 250px;
       flex-grow: 1;
@@ -177,14 +184,14 @@
   }
 }
 :root {
-/* primitive */
+  /* primitive */
   --clr-chesnut-500: #9f3e2d;
   --clr-khaki-500: #b3a488;
   --clr-tea-rose-500: #ebbeb6;
   --clr-white-500: #fefefb;
   --clr-black-500: #0c0403;
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.5,1240,18,1.5,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.5,1240,18,1.5,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --ff-heading: "Inter", serif;
   --ff-body: "Inter", serif;
 
@@ -194,7 +201,7 @@
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-extra-bold: 800;
-  
+
   /* Step 0: 16px → 18px */
   --fs-small: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
   /* Step 1: 24px → 27px */
@@ -204,7 +211,7 @@
   /* Step 3: 54px → 60.75px */
   --fs-extra-large: clamp(3.375rem, 3.2283rem + 0.7337vw, 3.7969rem);
 
-/* semantic */
+  /* semantic */
   --clr-primary: var(--clr-chesnut-500);
   --clr-secondary: var(--clr-khaki-500);
   --clr-accent: var(--clr-tea-rose-500);
@@ -215,7 +222,9 @@
 html {
   background-color: var(--clr-white-500);
 }
-h1, h2, h4 {
+h1,
+h2,
+h4 {
   font-family: var(--ff-heading);
   color: var(--clr-text-dark);
   font-weight: var(--fw-extra-bold);
@@ -226,7 +235,8 @@ h1 {
 h2 {
   font-size: var(--fs-large);
 }
-h3, h4 {
+h3,
+h4 {
   font-size: var(--fs-medium);
 }
 a {
