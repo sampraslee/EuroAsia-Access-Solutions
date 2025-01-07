@@ -129,32 +129,60 @@
           <span class="word-highlight">Interested?</span> Get in touch with us.
         </h2>
         <form action="" method="post">
-          <p>
-            <label for="subject">Subject</label>
+          <div class="form-field">
+            <label for="subject">How can we help you?</label>
             <select name="subjects" id="subject">
               <!-- Fill in later -->
+              <option value="" class="placeholder" disabled selected="selected">
+                I'd like to...
+              </option>
+              <option value="learn-more">
+                Learn more about your solutions
+              </option>
+              <option value="visit-showroom">Visit your showroom</option>
+              <option value="site-visit">Schedule a home visit</option>
             </select>
-          </p>
-          <p>
+          </div>
+          <div class="form-field">
             <label for="name">Your Name</label>
             <input type="text" name="name" id="name" />
-          </p>
-          <p>
+          </div>
+          <div class="form-field">
             <label for="contact-number">Contact Number</label>
             <input type="tel" name="contact-number" id="contact-number" />
-          </p>
-          <p>
+          </div>
+          <div class="form-field">
             <label for="email">Your Email</label
             ><input type="email" name="email" id="email" />
-          </p>
-          <p>
-            <label for="state">State</label
-            ><select name="state" id="state"></select>
-          </p>
-          <p>
+          </div>
+          <div class="form-field">
+            <label for="state">State</label>
+            <select name="state" id="state">
+              <option value="" class="placeholder" disabled selected="selected">
+                Select your state
+              </option>
+              <option value="kuala-lumpur">Kuala Lumpur</option>
+              <option value="labuan">Labuan</option>
+              <option value="putrajaya">Putrajaya</option>
+              <option value="johor">Johor</option>
+              <option value="kelantan">Kelantan</option>
+              <option value="kedah">Kedah</option>
+              <option value="malacca">Malacca</option>
+              <option value="negeri-sembilan">Negeri Sembilan</option>
+              <option value="pahang">Pahang</option>
+              <option value="penang">Penang</option>
+              <option value="perak">Perak</option>
+              <option value="perlis">Perlis</option>
+              <option value="sabah">Sabah</option>
+              <option value="sarawak">Sarawak</option>
+              <option value="Selangor">Selangor</option>
+              <option value="terengganu">Terengganu</option>
+            </select>
+          </div>
+          <div class="form-field">
             <label for="message">Your Message</label
             ><textarea name="message" id="message"></textarea>
-          </p>
+          </div>
           <input type="submit" value="Send Message" />
         </form>
       </section>
